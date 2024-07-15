@@ -1,5 +1,6 @@
 body {
   color: #212121;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -38,4 +39,29 @@ h2 {
 
 h3 {
   font-size: 24px;
+}
+
+h3::before {
+  content: "-";
+}
+h3::after {
+  content: "";
+  width: 32px;
+  height: 4px;
+  background-color: var(--gray-30);
+  display: inline-block;
+}
+
+pre {
+  background-color: #fec62e;
+}
+
+.hero {
+  height: 350px;
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    ),
+    url("../assets/images/patron-1.png");
 }
