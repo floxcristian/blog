@@ -1,44 +1,81 @@
-body {
-  color: #212121;
-  font-family: "Roboto", sans-serif;
-  margin: 0;
+:root {
+  font-size: 18px;
+  --gray-30: #212121;
+  --gray-20: #212429;
+  --gray-10: #616161;
 }
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
-a {
-  color: #212121;
+body {
+  color: var(--gray-30);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
 .header {
+  position: sticky;
+  top: 0;
+}
+
+.header-content {
+  position: relative;
+}
+
+.main {
+  /*border: 1px solid red;*/
+}
+
+.wrapper {
+  width: 902px;
+  margin: auto;
+}
+
+a {
+  color: var(--gray-30);
+}
+
+header {
   font-size: 14px;
-  color: #616161;
+  width: 188px;
+  color: var(--gray-10);
+  position: absolute;
+  top: 64px;
+  left: -232px;
 }
 
 header a {
-  color: #616161;
+  color: var(--gray-10);
   text-decoration: none;
 }
 
 header a:hover {
-  color: #212121;
+  color: var(--gray-30);
+}
+
+header li {
+  margin-bottom: 16px;
 }
 
 nav details summary {
   font-weight: bold;
-}
-
-h1 {
-  font-size: 60px;
-  margin-top: 64px;
-  margin-bottom: 16px;
+  line-height: 24px;
 }
 
 hr {
   margin: 64px 0;
 }
+
+h1 {
+  font-size: 60px; /* 3.75em;*/
+  margin-top: 64px;
+  margin-bottom: 16px;
+  font-weight: normal;
+}
+
 h2 {
   font-size: 2em;
   margin: 64px 0 40px;
@@ -50,11 +87,12 @@ h3 {
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  position: relative;
 }
 
 .section-content {
   counter-reset: titleList;
-  margin-top: 64px;
+  margin-top: 164px; /*64px;*/
 }
 
 .section-content:first-of-type {
@@ -66,7 +104,7 @@ h3 {
 }
 .section-content h3 {
   counter-increment: titleList;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
 }
 
 .section-content h3::before {
@@ -74,10 +112,13 @@ h3 {
 }
 .section-content h3::after {
   content: " ";
-  width: 32px;
+  width: 80px;
   height: 4px;
   background-color: var(--gray-30);
-  display: inline-block;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .section-content ol li {
@@ -100,14 +141,17 @@ pre {
 }
 
 blockquote {
+  font-size: 24px;
   margin: 32px 0;
   padding-left: 16px;
-  font-size: 24px;
+  line-height: 24px;
+  border-left: 4px solid var(--gray-30);
 }
 
 blockquote span {
   color: var(--gray-10);
 }
+
 blockquote span:before {
   content: "- ";
 }
@@ -119,5 +163,5 @@ blockquote span:before {
       rgba(255, 255, 255, 0.3),
       transparent
     ),
-    url("../assets/images/patron-1.png");
+    url("../assets/images/pattern.png");
 }

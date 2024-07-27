@@ -1,28 +1,36 @@
+:root {
+  font-size: 18px;
+  --gray-10: #616161;
+  --gray-20: #212429;
+  --gray-30: #212121;
+}
+
 body {
-  color: #212121;
+  color: var(--gray-30);
   font-family: "Roboto", sans-serif;
 }
 
-html {
-  font-size: 16px;
-}
-
 a {
-  color: #212121;
+  color: var(--gray-30);
 }
 
+/*
 .header {
   font-size: 14px;
-  color: #616161;
+  color: var(--gray-10);
+}*/
+header {
+  font-size: 14px;
+  color: var(--gray-10);
 }
 
 header a {
-  color: #616161;
+  color: var(--gray-10);
   text-decoration: none;
 }
 
 header a:hover {
-  color: #212121;
+  color: var(--gray-30);
 }
 
 nav details summary {
@@ -44,6 +52,7 @@ h3 {
 .section-content {
   counter-reset: titleList;
 }
+
 .section-content h3 {
   counter-increment: titleList;
 }
@@ -51,13 +60,15 @@ h3 {
 .section-content h3::before {
   content: counter(titleList) ". ";
 }
+
 .section-content h3::after {
   content: "";
   width: 32px;
   height: 4px;
   background-color: var(--gray-30);
-  display: inline-block;
+  display: block;
 }
+
 .section-content + hr {
   display: none;
 }
@@ -73,5 +84,5 @@ pre {
       rgba(255, 255, 255, 0.3),
       transparent
     ),
-    url("../assets/images/patron-1.png");
+    url("../assets/images/pattern.png");
 }
